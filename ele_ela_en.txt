@@ -1,5 +1,5 @@
-is
-is
+is (permanent)
+is (temporary)
 has
 does
 goes
@@ -7,17 +7,17 @@ can
 says
 sees
 gives
-knows
+knows (a fact)
 wants
 stays
 arrives
 passes
 must
-thinks
+thinks / finds
 speaks
 brings
 takes
-leaves
+leaves (let)
 searches for
 understands
 begins
@@ -26,10 +26,10 @@ looks
 follows
 comes
 thinks
-leaves
+leaves (go out)
 calls
 becomes
-knows
+knows (a person/place)
 lives
 feels
 treats
@@ -49,8 +49,8 @@ reads
 hears
 sleeps
 wakes up
-plays
-plays
+plays (a game/sport)
+plays (as children do)
 studies
 learns
 teaches

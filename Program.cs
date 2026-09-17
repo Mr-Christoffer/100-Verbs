@@ -79,6 +79,7 @@ void PlayGame()
         int whichPronoun = randNr.Next(0, 8);
         int whichWord = randNr.Next(0, 100);
         PlayRound(whichPronoun, whichWord);
+        System.Console.WriteLine("");
         System.Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }
@@ -94,15 +95,22 @@ void PlayRound(int Pronoun, int Word)
             System.Console.Write($"{formatPT[0]} ");
             string? answer0 = Console.ReadLine();
             if (answer0 == eu[Word])
-            {
+            { 
+                Console.Clear();
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is \n{formatPT[0]} {eu[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is \n{formatPT[0]} {eu[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -114,12 +122,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is \n{formatPT[1]} {voce[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is \n{formatPT[1]} {voce[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -131,12 +145,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is \n{formatPT[2]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is \n{formatPT[2]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -148,12 +168,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is \n{formatPT[3]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is \n{formatPT[3]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -165,12 +191,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is \n{formatPT[4]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is \n{formatPT[4]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -182,12 +214,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is \n{formatPT[5]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is \n{formatPT[5]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -199,12 +237,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is \n{formatPT[6]} {nos[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is \n{formatPT[6]} {nos[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -216,12 +260,18 @@ void PlayRound(int Pronoun, int Word)
             {
                 System.Console.WriteLine($"You are right!");
                 System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is \n{formatPT[7]} {voces[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
                 System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is \n{formatPT[7]} {voces[Word]} in portuguese.");
+                System.Console.WriteLine("");
+                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
+                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
                 AddScore(Pronoun, 0, Word);
             }
             break;

@@ -17,7 +17,7 @@ think / find
 speak
 bring
 take
-leave
+leave (let)
 search for
 understand
 begin
@@ -26,10 +26,10 @@ look
 follow
 come
 think
-leave
+leave (go out)
 call
 become
-know
+know (a person/place)
 live
 feel
 treat
@@ -49,8 +49,8 @@ read
 hear
 sleep
 wake up
-play
-play
+play (a game/sport)
+play (as children do)
 study
 learn
 teach
