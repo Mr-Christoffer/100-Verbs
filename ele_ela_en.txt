@@ -1,101 +1,100 @@
-1	is
-2	is
-3	has
-4	does
-5	goes
-6	can
-7	says
-8	sees
-9	gives
-10	knows
-11	wants
-12	stays
-13	arrives
-14	passes
-15	must
-16	thinks
-17	speaks
-18	brings
-19	takes
-20	leaves
-21	searches for
-22	understands
-23	begins
-24	seems
-25	looks
-26	follows
-27	comes
-28	thinks
-29	leaves
-30	calls
-31	becomes
-32	knows
-33	lives
-34	feels
-35	treats
-36	waits
-37	returns
-38	remembers
-39	allows
-40	appears
-41	manages
-42	eats
-43	drinks
-44	runs
-45	opens
-46	closes
-47	writes
-48	reads
-49	hears
-50	sleeps
-51	wakes up
-52	plays
-53	plays
-54	studies
-55	learns
-56	teaches
-57	works
-58	helps
-59	changes
-60	resides
-61	walks
-62	falls
-63	rises
-64	descends
-65	enters
-66	uses
-67	loses
-68	wins
-69	likes
-70	loves
-71	hates
-72	kills
-73	dies
-74	is born
-75	grows
-76	shows
-77	tells
-78	requests
-79	asks
-80	answers
-81	explains
-82	decides
-83	chooses
-84	resolves
-85	creates
-86	builds
-87	destroys
-88	breaks
-89	fixes
-90	cleans
-91	cooks
-92	pays
-93	buys
-94	sells
-95	spends
-96	saves
-97	travels
-98	drives
-99	flies
-100	swims
-101
+is
+is
+has
+does
+goes
+can
+says
+sees
+gives
+knows
+wants
+stays
+arrives
+passes
+must
+thinks
+speaks
+brings
+takes
+leaves
+searches for
+understands
+begins
+seems
+looks
+follows
+comes
+thinks
+leaves
+calls
+becomes
+knows
+lives
+feels
+treats
+waits
+returns
+remembers
+allows
+appears
+manages
+eats
+drinks
+runs
+opens
+closes
+writes
+reads
+hears
+sleeps
+wakes up
+plays
+plays
+studies
+learns
+teaches
+works
+helps
+changes
+resides
+walks
+falls
+rises
+descends
+enters
+uses
+loses
+wins
+likes
+loves
+hates
+kills
+dies
+is born
+grows
+shows
+tells
+requests
+asks
+answers
+explains
+decides
+chooses
+resolves
+creates
+builds
+destroys
+breaks
+fixes
+cleans
+cooks
+pays
+buys
+sells
+spends
+saves
+travels
+drives
+flies
+swims

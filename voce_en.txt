@@ -1,101 +1,100 @@
-1	are
-2	are
-3	have
-4	do
-5	go
-6	can
-7	say
-8	see
-9	give
-10	know
-11	want
-12	stay
-13	arrive
-14	pass
-15	must
-16	think
-17	speak
-18	bring
-19	take
-20	leave
-21	search for
-22	understand
-23	begin
-24	seem
-25	look
-26	follow
-27	come
-28	think
-29	leave
-30	call
-31	become
-32	know
-33	live
-34	feel
-35	treat
-36	wait
-37	return
-38	remember
-39	allow
-40	appear
-41	manage
-42	eat
-43	drink
-44	run
-45	open
-46	close
-47	write
-48	read
-49	hear
-50	sleep
-51	wake up
-52	play
-53	play
-54	study
-55	learn
-56	teach
-57	work
-58	help
-59	change
-60	reside
-61	walk
-62	fall
-63	rise
-64	descend
-65	enter
-66	use
-67	lose
-68	win
-69	like
-70	love
-71	hate
-72	kill
-73	die
-74	are born
-75	grow
-76	show
-77	tell
-78	request
-79	ask
-80	answer
-81	explain
-82	decide
-83	choose
-84	resolve
-85	create
-86	build
-87	destroy
-88	break
-89	fix
-90	clean
-91	cook
-92	pay
-93	buy
-94	sell
-95	spend
-96	save
-97	travel
-98	drive
-99	fly
-100	swim
-101
+are
+are
+have
+do
+go
+can
+say
+see
+give
+know
+want
+stay
+arrive
+pass
+must
+think
+speak
+bring
+take
+leave
+search for
+understand
+begin
+seem
+look
+follow
+come
+think
+leave
+call
+become
+know
+live
+feel
+treat
+wait
+return
+remember
+allow
+appear
+manage
+eat
+drink
+run
+open
+close
+write
+read
+hear
+sleep
+wake up
+play
+play
+study
+learn
+teach
+work
+help
+change
+reside
+walk
+fall
+rise
+descend
+enter
+use
+lose
+win
+like
+love
+hate
+kill
+die
+are born
+grow
+show
+tell
+request
+ask
+answer
+explain
+decide
+choose
+resolve
+create
+build
+destroy
+break
+fix
+clean
+cook
+pay
+buy
+sell
+spend
+save
+travel
+drive
+fly
+swim

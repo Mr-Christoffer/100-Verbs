@@ -6,8 +6,8 @@ string[] ele = File.ReadAllLines("ele_ela.txt");
 string[] eles = File.ReadAllLines("eles_elas.txt");
 string[] eu = File.ReadAllLines("eu.txt");
 string[] nos = File.ReadAllLines("nos.txt");
-string[] voce = File.ReadAllLines("voce.txt");
-string[] voces = File.ReadAllLines("voces.txt");
+string[] voce = File.ReadAllLines("você.txt");
+string[] voces = File.ReadAllLines("vocês.txt");
 
 string[] eleEn = File.ReadAllLines("ele_ela_en.txt");
 string[] elesEn = File.ReadAllLines("eles_elas_en.txt");
@@ -71,10 +71,18 @@ PlayGame();
 
 void PlayGame()
 {
-    Random randNr = new Random();
-    int whichPronoun = randNr.Next(0, 8);
-    int whichWord = randNr.Next(0, 100);
-    PlayRound(whichPronoun, whichWord);
+    bool playingGame = true;
+    while (playingGame)
+    {
+        Console.Clear();
+        Random randNr = new Random();
+        int whichPronoun = randNr.Next(0, 8);
+        int whichWord = randNr.Next(0, 100);
+        PlayRound(whichPronoun, whichWord);
+        System.Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+    }
+
 }
 
 void PlayRound(int Pronoun, int Word)
@@ -88,13 +96,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer0 == eu[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is {formatPT[0]} {eu[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is \n{formatPT[0]} {eu[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is {formatPT[0]} {eu[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is \n{formatPT[0]} {eu[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -105,13 +113,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer1 == voce[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is {formatPT[1]} {voce[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is \n{formatPT[1]} {voce[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is {formatPT[1]} {voce[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is \n{formatPT[1]} {voce[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -122,13 +130,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer2 == ele[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is {formatPT[2]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is \n{formatPT[2]} {ele[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is {formatPT[2]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is \n{formatPT[2]} {ele[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -139,13 +147,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer3 == ele[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is {formatPT[3]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is \n{formatPT[3]} {ele[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is {formatPT[3]} {ele[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is \n{formatPT[3]} {ele[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -156,13 +164,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer4 == eles[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is {formatPT[4]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is \n{formatPT[4]} {eles[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is {formatPT[4]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is \n{formatPT[4]} {eles[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -173,13 +181,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer5 == eles[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is {formatPT[5]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is \n{formatPT[5]} {eles[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is {formatPT[5]} {eles[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is \n{formatPT[5]} {eles[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -190,13 +198,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer6 == nos[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is {formatPT[6]} {nos[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is \n{formatPT[6]} {nos[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is {formatPT[6]} {nos[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is \n{formatPT[6]} {nos[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;
@@ -207,13 +215,13 @@ void PlayRound(int Pronoun, int Word)
             if (answer7 == voces[Word])
             {
                 System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is {formatPT[7]} {voces[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is \n{formatPT[7]} {voces[Word]} in portuguese.");
                 AddScore(Pronoun, 1, Word);
             }
             else
             {
                 System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is {formatPT[7]} {voces[Word]} in portuguese.");
+                System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is \n{formatPT[7]} {voces[Word]} in portuguese.");
                 AddScore(Pronoun, 0, Word);
             }
             break;

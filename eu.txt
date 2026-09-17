@@ -1,101 +1,100 @@
-1	sou
-2	estou
-3	tenho
-4	faço
-5	vou
-6	posso
-7	digo
-8	vejo
-9	dou
-10	sei
-11	quero
-12	fico
-13	chego
-14	passo
-15	devo
-16	acho
-17	falo
-18	trago
-19	levo
-20	deixo
-21	procuro
-22	entendo
-23	começo
-24	pareço
-25	olho
-26	sigo
-27	venho
-28	penso
-29	saio
-30	chamo
-31	torno
-32	conheço
-33	vivo
-34	sinto
-35	trato
-36	espero
-37	volto
-38	lembro
-39	permito
-40	apareço
-41	consigo
-42	como
-43	bebo
-44	corro
-45	abro
-46	fecho
-47	escrevo
-48	leio
-49	ouço
-50	durmo
-51	acordo
-52	jogo
-53	brinco
-54	estudo
-55	aprendo
-56	ensino
-57	trabalho
-58	ajudo
-59	mudo
-60	moro
-61	ando
-62	caio
-63	subo
-64	desço
-65	entro
-66	uso
-67	perco
-68	ganho
-69	gosto
-70	amo
-71	odeio
-72	mato
-73	morro
-74	nasço
-75	cresço
-76	mostro
-77	conto
-78	peço
-79	pergunto
-80	respondo
-81	explico
-82	decido
-83	escolho
-84	resolvo
-85	crio
-86	construo
-87	destruo
-88	quebro
-89	conserto
-90	limpo
-91	cozinho
-92	pago
-93	compro
-94	vendo
-95	gasto
-96	economizo
-97	viajo
-98	dirijo
-99	voo
-100	nado
-101
+sou
+estou
+tenho
+faço
+vou
+posso
+digo
+vejo
+dou
+sei
+quero
+fico
+chego
+passo
+devo
+acho
+falo
+trago
+levo
+deixo
+procuro
+entendo
+começo
+pareço
+olho
+sigo
+venho
+penso
+saio
+chamo
+torno
+conheço
+vivo
+sinto
+trato
+espero
+volto
+lembro
+permito
+apareço
+consigo
+como
+bebo
+corro
+abro
+fecho
+escrevo
+leio
+ouço
+durmo
+acordo
+jogo
+brinco
+estudo
+aprendo
+ensino
+trabalho
+ajudo
+mudo
+moro
+ando
+caio
+subo
+desço
+entro
+uso
+perco
+ganho
+gosto
+amo
+odeio
+mato
+morro
+nasço
+cresço
+mostro
+conto
+peço
+pergunto
+respondo
+explico
+decido
+escolho
+resolvo
+crio
+construo
+destruo
+quebro
+conserto
+limpo
+cozinho
+pago
+compro
+vendo
+gasto
+economizo
+viajo
+dirijo
+voo
+nado
