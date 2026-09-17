@@ -21,36 +21,42 @@ int[] euScore2 = new int[englishWords.Length];
 int[] euScore3 = new int[englishWords.Length];
 int[] euScore4 = new int[englishWords.Length];
 int[] euScore5 = new int[englishWords.Length];
+double[] euAvScore = new double[englishWords.Length];
 
 int[] voceScore1 = new int[englishWords.Length];
 int[] voceScore2 = new int[englishWords.Length];
 int[] voceScore3 = new int[englishWords.Length];
 int[] voceScore4 = new int[englishWords.Length];
 int[] voceScore5 = new int[englishWords.Length];
+double[] voceAvScore = new double[englishWords.Length];
 
 int[] eleScore1 = new int[englishWords.Length];
 int[] eleScore2 = new int[englishWords.Length];
 int[] eleScore3 = new int[englishWords.Length];
 int[] eleScore4 = new int[englishWords.Length];
 int[] eleScore5 = new int[englishWords.Length];
+double[] eleAvScore = new double[englishWords.Length];
 
 int[] elesScore1 = new int[englishWords.Length];
 int[] elesScore2 = new int[englishWords.Length];
 int[] elesScore3 = new int[englishWords.Length];
 int[] elesScore4 = new int[englishWords.Length];
 int[] elesScore5 = new int[englishWords.Length];
+double[] elesAvScore = new double[englishWords.Length];
 
 int[] nosScore1 = new int[englishWords.Length];
 int[] nosScore2 = new int[englishWords.Length];
 int[] nosScore3 = new int[englishWords.Length];
 int[] nosScore4 = new int[englishWords.Length];
 int[] nosScore5 = new int[englishWords.Length];
+double[] nosAvScore = new double[englishWords.Length];
 
 int[] vocesScore1 = new int[englishWords.Length];
 int[] vocesScore2 = new int[englishWords.Length];
 int[] vocesScore3 = new int[englishWords.Length];
 int[] vocesScore4 = new int[englishWords.Length];
 int[] vocesScore5 = new int[englishWords.Length];
+double[] vocesAvScore = new double[englishWords.Length];
 
 string[] formatPT = { "Eu", "Você", "Ele", "Ela", "Eles", "Elas", "Nos", "Vocês" };
 string[] formatEN = { "I", "You (singular)", "He", "She", "They", "They (females)", "We", "You (plural)" };
@@ -66,19 +72,14 @@ string[] formatEN = { "I", "You (singular)", "He", "She", "They", "They (females
 Initialize();
 PlayGame();
 
-
-
-
 void PlayGame()
 {
     bool playingGame = true;
     while (playingGame)
     {
+        ScoreCheck();
         Console.Clear();
-        Random randNr = new Random();
-        int whichPronoun = randNr.Next(0, 8);
-        int whichWord = randNr.Next(0, 100);
-        PlayRound(whichPronoun, whichWord);
+        Randomize();
         System.Console.WriteLine("");
         System.Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
@@ -91,192 +92,29 @@ void PlayRound(int Pronoun, int Word)
     switch (Pronoun)
     {
         case 0: // Eu
-            System.Console.WriteLine($"{formatEN[0]} {euEn[Word]}");
-            System.Console.Write($"{formatPT[0]} ");
-            string? answer0 = Console.ReadLine();
-            if (answer0 == eu[Word])
-            { 
-                Console.Clear();
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is \n{formatPT[0]} {eu[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[0]} {euEn[Word]} is \n{formatPT[0]} {eu[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, eu, euEn);
             break;
         case 1: // Você
-            System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]}");
-            System.Console.Write($"{formatPT[1]} ");
-            string? answer1 = Console.ReadLine();
-            if (answer1 == voce[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is \n{formatPT[1]} {voce[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[1]} {voceEn[Word]} is \n{formatPT[1]} {voce[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, voce, voceEn);
             break;
         case 2: // Ele
-            System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]}");
-            System.Console.Write($"{formatPT[2]} ");
-            string? answer2 = Console.ReadLine();
-            if (answer2 == ele[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is \n{formatPT[2]} {ele[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[2]} {eleEn[Word]} is \n{formatPT[2]} {ele[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, ele, eleEn);
             break;
         case 3: // Ela
-            System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]}");
-            System.Console.Write($"{formatPT[3]} ");
-            string? answer3 = Console.ReadLine();
-            if (answer3 == ele[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is \n{formatPT[3]} {ele[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[3]} {eleEn[Word]} is \n{formatPT[3]} {ele[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, ele, eleEn);
             break;
         case 4: // Eles
-            System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]}");
-            System.Console.Write($"{formatPT[4]} ");
-            string? answer4 = Console.ReadLine();
-            if (answer4 == eles[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is \n{formatPT[4]} {eles[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[4]} {elesEn[Word]} is \n{formatPT[4]} {eles[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, eles, elesEn);
             break;
         case 5: // Elas
-            System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]}");
-            System.Console.Write($"{formatPT[5]} ");
-            string? answer5 = Console.ReadLine();
-            if (answer5 == eles[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is \n{formatPT[5]} {eles[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[5]} {elesEn[Word]} is \n{formatPT[5]} {eles[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, eles, elesEn);
             break;
         case 6: // Nos
-            System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]}");
-            System.Console.Write($"{formatPT[6]} ");
-            string? answer6 = Console.ReadLine();
-            if (answer6 == nos[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is \n{formatPT[6]} {nos[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[6]} {nosEn[Word]} is \n{formatPT[6]} {nos[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, nos, nosEn);
             break;
         case 7: // Voces
-            System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]}");
-            System.Console.Write($"{formatPT[7]} ");
-            string? answer7 = Console.ReadLine();
-            if (answer7 == voces[Word])
-            {
-                System.Console.WriteLine($"You are right!");
-                System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is \n{formatPT[7]} {voces[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 1, Word);
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong answer!");
-                System.Console.WriteLine($"{formatEN[7]} {vocesEn[Word]} is \n{formatPT[7]} {voces[Word]} in portuguese.");
-                System.Console.WriteLine("");
-                System.Console.WriteLine($"{"Eu", -15} {"Você", -15} {"Ele/Ela", -15} {"Eles/Elas", -15} {"Nos", -15} {"Vocês", -15}"); 
-                System.Console.WriteLine($"{eu[Word], -15} {voce[Word], -15} {ele[Word], -15} {eles[Word], -15} {nos[Word], -15} {voces[Word], -15}"); 
-                AddScore(Pronoun, 0, Word);
-            }
+            AnswerCheckPrint(Pronoun, Word, voces, vocesEn);
             break;
-
-
     }
 }
 
@@ -343,7 +181,18 @@ void AddScore(int pronoun, int point, int word)
     }
 }
 
-
+void ScoreCheck()
+{
+    for (int i = 0; i < englishWords.Length; i++)
+    {
+        euAvScore[i] = (euScore1[i] + euScore2[i] + euScore3[i] + euScore4[i] + euScore5[i]) / 5;
+        voceAvScore[i] = (voceScore1[i] + voceScore2[i] + voceScore3[i] + voceScore4[i] + voceScore5[i]) / 5;
+        eleAvScore[i] = (eleScore1[i] + eleScore2[i] + eleScore3[i] + eleScore4[i] + eleScore5[i]) / 5;
+        elesAvScore[i] = (elesScore1[i] + elesScore2[i] + elesScore3[i] + elesScore4[i] + elesScore5[i]) / 5;
+        nosAvScore[i] = (nosScore1[i] + nosScore2[i] + nosScore3[i] + nosScore4[i] + nosScore5[i]) / 5;
+        vocesAvScore[i] = (vocesScore1[i] + vocesScore2[i] + vocesScore3[i] + vocesScore4[i] + vocesScore5[i]) / 5;
+    }
+}
 
 void Initialize()
 {
@@ -354,35 +203,162 @@ void Initialize()
         euScore3[i] = 0;
         euScore4[i] = 0;
         euScore5[i] = 0;
+        euAvScore[i] = 0;
 
         voceScore1[i] = 0;
         voceScore2[i] = 0;
         voceScore3[i] = 0;
         voceScore4[i] = 0;
         voceScore5[i] = 0;
+        voceAvScore[i] = 0;
 
         eleScore1[i] = 0;
         eleScore2[i] = 0;
         eleScore3[i] = 0;
         eleScore4[i] = 0;
         eleScore5[i] = 0;
+        eleAvScore[i] = 0;
 
         elesScore1[i] = 0;
         elesScore2[i] = 0;
         elesScore3[i] = 0;
         elesScore4[i] = 0;
         elesScore5[i] = 0;
+        elesAvScore[i] = 0;
 
         nosScore1[i] = 0;
         nosScore2[i] = 0;
         nosScore3[i] = 0;
         nosScore4[i] = 0;
         nosScore5[i] = 0;
+        nosAvScore[i] = 0;
 
         vocesScore1[i] = 0;
         vocesScore2[i] = 0;
         vocesScore3[i] = 0;
         vocesScore4[i] = 0;
         vocesScore5[i] = 0;
+        voceAvScore[i] = 0;
     }
+}
+void AnswerCheckPrint(int pronoun, int word, string[] wordList, string[] wordListEn)
+{
+    System.Console.WriteLine($"{formatEN[pronoun]} {wordListEn[word]}");
+    System.Console.Write($"{formatPT[pronoun]} ");
+    string? answer = Console.ReadLine();
+    if (answer == wordList[word])
+    {
+        Console.Clear();
+        System.Console.WriteLine($"You are right!");
+        System.Console.WriteLine($"{formatEN[pronoun]} {wordList[word]} is \n{formatPT[pronoun]} {wordList[word]} in portuguese.");
+        System.Console.WriteLine("");
+        System.Console.WriteLine($"{"Eu",-15} {"Você",-15} {"Ele/Ela",-15} {"Eles/Elas",-15} {"Nos",-15} {"Vocês",-15}");
+        System.Console.WriteLine($"{eu[word],-15} {voce[word],-15} {ele[word],-15} {eles[word],-15} {nos[word],-15} {voces[word],-15}");
+        AddScore(pronoun, 1, word);
+    }
+    else
+    {
+        Console.Clear();
+        System.Console.WriteLine("Wrong answer!");
+        System.Console.WriteLine($"{formatEN[pronoun]} {wordList[word]} is \n{formatPT[pronoun]} {wordList[word]} in portuguese.");
+        System.Console.WriteLine("");
+        System.Console.WriteLine($"{"Eu",-15} {"Você",-15} {"Ele/Ela",-15} {"Eles/Elas",-15} {"Nos",-15} {"Vocês",-15}");
+        System.Console.WriteLine($"{eu[word],-15} {voce[word],-15} {ele[word],-15} {eles[word],-15} {nos[word],-15} {voces[word],-15}");
+        AddScore(pronoun, 0, word);
+    }
+
+}
+
+void Randomize()
+{
+    Console.Clear();
+    Random randNr = new Random();
+    int whichPronoun = randNr.Next(0, 8);
+    int whichWord = randNr.Next(0, 100);
+    switch (whichPronoun)
+    {
+        case 0: // Eu
+            if ((euAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 1: // Você
+            if ((voceAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 2: // Ele
+            if ((eleAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 3: // Ela
+            if ((eleAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 4: // Eles
+            if ((elesAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 5: // Elas
+            if ((elesAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 6: // Nos
+            if ((nosAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+        case 7: // Vocês
+            if ((vocesAvScore[whichWord]) < 2)
+            {
+                PlayRound(whichPronoun, whichWord);
+                break;
+            }
+            else
+            {
+                break;
+            }
+
+    }
+
+
 }
