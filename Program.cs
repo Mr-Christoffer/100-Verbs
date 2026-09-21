@@ -278,7 +278,7 @@ void Randomize()
     switch (whichPronoun)
     {
         case 0: // Eu
-            if ((euAvScore[whichWord]) < 2)
+            if ((euAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -288,7 +288,7 @@ void Randomize()
                 break;
             }
         case 1: // Você
-            if ((voceAvScore[whichWord]) < 2)
+            if ((voceAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -298,7 +298,7 @@ void Randomize()
                 break;
             }
         case 2: // Ele
-            if ((eleAvScore[whichWord]) < 2)
+            if ((eleAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -308,7 +308,7 @@ void Randomize()
                 break;
             }
         case 3: // Ela
-            if ((eleAvScore[whichWord]) < 2)
+            if ((eleAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -318,7 +318,7 @@ void Randomize()
                 break;
             }
         case 4: // Eles
-            if ((elesAvScore[whichWord]) < 2)
+            if ((elesAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -328,7 +328,7 @@ void Randomize()
                 break;
             }
         case 5: // Elas
-            if ((elesAvScore[whichWord]) < 2)
+            if ((elesAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -338,7 +338,7 @@ void Randomize()
                 break;
             }
         case 6: // Nos
-            if ((nosAvScore[whichWord]) < 2)
+            if ((nosAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
@@ -348,7 +348,7 @@ void Randomize()
                 break;
             }
         case 7: // Vocês
-            if ((vocesAvScore[whichWord]) < 2)
+            if ((vocesAvScore[whichWord]) < 1)
             {
                 PlayRound(whichPronoun, whichWord);
                 break;
