@@ -3,6 +3,7 @@ using System.Text.Json;
 
 const string FilePath = "scores.json";
 
+int finishedWords = 0;
 string[] englishWords = File.ReadAllLines("english.txt");
 string[] portugueseWords = File.ReadAllLines("portuguese.txt");
 string[] ele = File.ReadAllLines("ele_ela.txt");
@@ -90,6 +91,20 @@ void PlayGame()
     while (playingGame)
     {
         ScoreCheck();
+        if (finishedWords == 600)
+        {
+            Console.Clear();
+            System.Console.WriteLine("------------------");
+            System.Console.WriteLine("Congratulations. You have finished the game! ");
+            System.Console.WriteLine("------------------");
+            System.Console.WriteLine("");
+            System.Console.WriteLine("");
+            System.Console.WriteLine("Press any key to exit the game");
+            Console.ReadKey();
+            playingGame = false;
+            continue;
+
+        }
         Console.Clear();
         Randomize();
         System.Console.WriteLine("");
@@ -268,6 +283,7 @@ void AddScore(int pronoun, int point, int word)
 
 void ScoreCheck()
 {
+    finishedWords = 0;
     for (int i = 0; i < englishWords.Length; i++)
     {
         euTotalScore[i] = (euScore1[i] + euScore2[i] + euScore3[i] + euScore4[i] + euScore5[i]);
@@ -276,7 +292,34 @@ void ScoreCheck()
         elesTotalScore[i] = (elesScore1[i] + elesScore2[i] + elesScore3[i] + elesScore4[i] + elesScore5[i]);
         nosTotalScore[i] = (nosScore1[i] + nosScore2[i] + nosScore3[i] + nosScore4[i] + nosScore5[i]);
         vocesTotalScore[i] = (vocesScore1[i] + vocesScore2[i] + vocesScore3[i] + vocesScore4[i] + vocesScore5[i]);
+        if (euTotalScore[i] == 5)
+        {
+            finishedWords++;
+        }
+        if (voceTotalScore[i] == 5)
+        {
+            finishedWords++;
+        }
+        if (eleTotalScore[i] == 5)
+        {
+            finishedWords++;
+        }
+        if (elesTotalScore[i] == 5)
+        {
+            finishedWords++;
+        }
+        if (nosTotalScore[i] == 5)
+        {
+            finishedWords++;
+        }
+        if (vocesTotalScore[i] == 5)
+        {
+            finishedWords++;
+        }
+
+
     }
+
 }
 
 void AnswerCheckPrint(int pronoun, int word, string[] wordList, string[] wordListEn)
