@@ -82,7 +82,6 @@ string[] formatEN = { "I", "You (singular)", "He", "She", "They", "They (females
 // formatPT[6] = Nos
 // formatPT[7] = Vocês
 LoadScores();
-Initialize();
 PlayGame();
 
 void PlayGame()
@@ -109,48 +108,96 @@ void PlayRound(int Pronoun, int Word)
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {euTotalScore[Word]} / 5");
+            if (euTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 1: // Você
             AnswerCheckPrint(Pronoun, Word, voce, voceEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {voceTotalScore[Word]} / 5");
+            if (voceTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 2: // Ele
             AnswerCheckPrint(Pronoun, Word, ele, eleEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {eleTotalScore[Word]} / 5");
+            if (eleTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 3: // Ela
             AnswerCheckPrint(Pronoun, Word, ele, eleEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {eleTotalScore[Word]} / 5");
+            if (eleTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 4: // Eles
             AnswerCheckPrint(Pronoun, Word, eles, elesEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {elesTotalScore[Word]} / 5");
+            if (elesTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 5: // Elas
             AnswerCheckPrint(Pronoun, Word, eles, elesEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {elesTotalScore[Word]} / 5");
+            if (elesTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 6: // Nos
             AnswerCheckPrint(Pronoun, Word, nos, nosEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {nosTotalScore[Word]} / 5");
+            if (nosTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
         case 7: // Voces
             AnswerCheckPrint(Pronoun, Word, voces, vocesEn);
             ScoreCheck();
             System.Console.WriteLine("");
             System.Console.WriteLine($"Points: {vocesTotalScore[Word]} / 5");
+            if (vocesTotalScore[Word] == 5)
+            {
+                System.Console.WriteLine("");
+                System.Console.WriteLine("CONGRATULATIONS. YOU HAVE 5 CORRECT ANSWERS. YOU WILL NOT SEE THIS WORD AGAIN!!");
+                System.Console.WriteLine("");
+            }
             break;
     }
 }
@@ -223,60 +270,12 @@ void ScoreCheck()
 {
     for (int i = 0; i < englishWords.Length; i++)
     {
-        euTotalScore[i] = (euScore1[i] + euScore2[i] + euScore3[i] + euScore4[i] + euScore5[i]) ;
-        voceTotalScore[i] = (voceScore1[i] + voceScore2[i] + voceScore3[i] + voceScore4[i] + voceScore5[i]) ;
-        eleTotalScore[i] = (eleScore1[i] + eleScore2[i] + eleScore3[i] + eleScore4[i] + eleScore5[i]) ;
-        elesTotalScore[i] = (elesScore1[i] + elesScore2[i] + elesScore3[i] + elesScore4[i] + elesScore5[i]) ;
-        nosTotalScore[i] = (nosScore1[i] + nosScore2[i] + nosScore3[i] + nosScore4[i] + nosScore5[i]) ;
-        vocesTotalScore[i] = (vocesScore1[i] + vocesScore2[i] + vocesScore3[i] + vocesScore4[i] + vocesScore5[i]) ;
-    }
-}
-
-void Initialize()
-{
-    for (int i = 0; i < englishWords.Length; i++)
-    {
-        euScore1[i] = 0;
-        euScore2[i] = 0;
-        euScore3[i] = 0;
-        euScore4[i] = 0;
-        euScore5[i] = 0;
-        euTotalScore[i] = 0;
-
-        voceScore1[i] = 0;
-        voceScore2[i] = 0;
-        voceScore3[i] = 0;
-        voceScore4[i] = 0;
-        voceScore5[i] = 0;
-        voceTotalScore[i] = 0;
-
-        eleScore1[i] = 0;
-        eleScore2[i] = 0;
-        eleScore3[i] = 0;
-        eleScore4[i] = 0;
-        eleScore5[i] = 0;
-        eleTotalScore[i] = 0;
-
-        elesScore1[i] = 0;
-        elesScore2[i] = 0;
-        elesScore3[i] = 0;
-        elesScore4[i] = 0;
-        elesScore5[i] = 0;
-        elesTotalScore[i] = 0;
-
-        nosScore1[i] = 0;
-        nosScore2[i] = 0;
-        nosScore3[i] = 0;
-        nosScore4[i] = 0;
-        nosScore5[i] = 0;
-        nosTotalScore[i] = 0;
-
-        vocesScore1[i] = 0;
-        vocesScore2[i] = 0;
-        vocesScore3[i] = 0;
-        vocesScore4[i] = 0;
-        vocesScore5[i] = 0;
-        voceTotalScore[i] = 0;
+        euTotalScore[i] = (euScore1[i] + euScore2[i] + euScore3[i] + euScore4[i] + euScore5[i]);
+        voceTotalScore[i] = (voceScore1[i] + voceScore2[i] + voceScore3[i] + voceScore4[i] + voceScore5[i]);
+        eleTotalScore[i] = (eleScore1[i] + eleScore2[i] + eleScore3[i] + eleScore4[i] + eleScore5[i]);
+        elesTotalScore[i] = (elesScore1[i] + elesScore2[i] + elesScore3[i] + elesScore4[i] + elesScore5[i]);
+        nosTotalScore[i] = (nosScore1[i] + nosScore2[i] + nosScore3[i] + nosScore4[i] + nosScore5[i]);
+        vocesTotalScore[i] = (vocesScore1[i] + vocesScore2[i] + vocesScore3[i] + vocesScore4[i] + vocesScore5[i]);
     }
 }
 
@@ -315,92 +314,103 @@ void AnswerCheckPrint(int pronoun, int word, string[] wordList, string[] wordLis
 void Randomize()
 {
     Console.Clear();
-    Random randNr = new Random();
-    int whichPronoun = randNr.Next(0, 8);
-    int whichWord = randNr.Next(0, 100);
-    switch (whichPronoun)
+    bool randomize = true;
+    while (randomize)
     {
-        case 0: // Eu
-            if ((euTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 1: // Você
-            if ((voceTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 2: // Ele
-            if ((eleTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 3: // Ela
-            if ((eleTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 4: // Eles
-            if ((elesTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 5: // Elas
-            if ((elesTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 6: // Nos
-            if ((nosTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-        case 7: // Vocês
-            if ((vocesTotalScore[whichWord]) < 5)
-            {
-                PlayRound(whichPronoun, whichWord);
-                break;
-            }
-            else
-            {
-                break;
-            }
-
+        Random randNr = new Random();
+        int whichPronoun = randNr.Next(0, 8);
+        int whichWord = randNr.Next(0, 100);
+        switch (whichPronoun)
+        {
+            case 0: // Eu
+                if ((euTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 1: // Você
+                if ((voceTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 2: // Ele
+                if ((eleTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 3: // Ela
+                if ((eleTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 4: // Eles
+                if ((elesTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 5: // Elas
+                if ((elesTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 6: // Nos
+                if ((nosTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            case 7: // Vocês
+                if ((vocesTotalScore[whichWord]) < 5)
+                {
+                    PlayRound(whichPronoun, whichWord);
+                    randomize = false;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+        }
     }
 
 
